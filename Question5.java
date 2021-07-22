@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Question5
 {
@@ -27,6 +28,27 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    //System.out.print("Enter the number of inputs: ");
+    int x = in.nextInt();
+    int[] num = new int[x];
+    while (x-- > 0){
+      int i = in.nextInt();
+      num[x] = i;
+    }
+    Arrays.sort(num);
+    int element = Integer.MIN_VALUE, max_count=1, count=1;
+    for(int a=1; a<num.length; a++){
+      if(num[a] == num[a-1])
+          count++;
+      else{
+          if(count >= max_count){
+              max_count = count;
+              element = num[a];
+          } 
+          count =1;
+      }
+    }
+    //System.out.println(Arrays.toString(num));
+    System.out.println(element);
   }
 }

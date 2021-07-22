@@ -18,6 +18,13 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
-    
+    /*System.out.print("Enter a number to represent the length of the base of a traingle: ");*/
+    int x = in.nextInt();
+    for (int i = x; i > 0; i--) {
+      for (int a = 0; a < i; a++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+    }
   }
 }
