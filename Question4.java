@@ -21,7 +21,7 @@ public class Question4
     /*System.out.print("Enter a number to represent the length of the base of a traingle: ");*/
     int x = in.nextInt();
     for (int i = x; i > 0; i--) {
-      for (int x = 0; x < i; x++) {
+      for (int a = 0; a < i; a++) {
         System.out.print("*");
       }
       System.out.println("");
